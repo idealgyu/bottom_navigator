@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 
 import 'page/home.dart';
 
+import 'package:bottom_navagation/color_schemes.g.dart';
+
 class Root extends GetView<RootController> {
   Root({Key? key}) : super(key: key);
 
@@ -56,19 +58,19 @@ class Root extends GetView<RootController> {
           onTap: controller.changeIndex,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home, color: Colors.grey,),
+                icon: Icon(Icons.home,  ),
               label: 'home',
-              activeIcon: Icon(Icons.home, color: Colors.blue,),
+              activeIcon: Icon(Icons.home,color: darkColorScheme.primary),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.explore, color: Colors.grey,),
+              icon: Icon(Icons.explore, ),
               label: 'explore',
-              activeIcon: Icon(Icons.explore, color: Colors.blue,),
+              activeIcon: Icon(Icons.explore,color: darkColorScheme.primary),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings, color: Colors.grey,),
+              icon: Icon(Icons.settings, ),
               label: 'setting',
-              activeIcon: Icon(Icons.settings, color: Colors.blue,),
+              activeIcon: Icon(Icons.settings, color: darkColorScheme.primary),
             ),
           ],
         ),

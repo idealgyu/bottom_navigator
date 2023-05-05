@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:bottom_navagation/color_schemes.g.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class Home extends StatelessWidget {
             height: 150,
 
             decoration: BoxDecoration(
-                color: Colors.grey,
+                color: darkColorScheme.onPrimary,
                 borderRadius: BorderRadius.circular(5),
             ),
 

@@ -30,6 +30,7 @@ class RootController extends GetxController{
 
   //leading에서 뒤로가기 눌러지면 호출되는 함수
   void back(){
+    setCategory(false);
     onWillPop();
   }
 

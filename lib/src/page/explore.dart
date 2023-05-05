@@ -31,7 +31,7 @@ class Explore extends StatelessWidget {
             height: 30,
 
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Theme.of(context).colorScheme.onPrimary,
               borderRadius: BorderRadius.circular(5),
             ),
           ),
@@ -44,7 +44,7 @@ class Explore extends StatelessWidget {
           height: 30,
 
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Theme.of(context).colorScheme.onPrimary,
             borderRadius: BorderRadius.circular(5),
           ),
         ),
@@ -56,7 +56,7 @@ class Explore extends StatelessWidget {
           height: 30,
 
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Theme.of(context).colorScheme.onPrimary,
             borderRadius: BorderRadius.circular(5),
           ),
         ),
@@ -68,7 +68,7 @@ class Explore extends StatelessWidget {
           height: 30,
 
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Theme.of(context).colorScheme.onPrimaryContainer,
             borderRadius: BorderRadius.circular(5),
           ),
         ),
@@ -76,7 +76,7 @@ class Explore extends StatelessWidget {
     );
   }
 
-  Widget _listMenu() {
+  Widget _listMenu(context) {
     return Center(
         child: SingleChildScrollView(
       child: Column(
@@ -89,7 +89,7 @@ class Explore extends StatelessWidget {
                   height: 150,
 
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     borderRadius: BorderRadius.circular(5),
                   ),
                 )),
@@ -105,7 +105,7 @@ class Explore extends StatelessWidget {
         _categoryMenu(context),
 
         //오버플로우 발생 -> Expanded로 감싸서 영역을 지정해줘서 해결했다.
-        Expanded(child: _listMenu())
+        Expanded(child: _listMenu(context))
       ],
     );
   }

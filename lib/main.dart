@@ -1,3 +1,4 @@
+import 'package:bottom_navagation/color_schemes.g.dart';
 import 'package:bottom_navagation/src/controller/root_controller.dart';
 import 'package:bottom_navagation/src/page/detail_home.dart';
 import 'package:bottom_navagation/src/root.dart';
@@ -6,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void main() async {
+
+
 
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([
@@ -16,6 +19,9 @@ void main() async {
 
   runApp(const MyApp());
 }
+
+// const seedColor = Color(0xFF6750A4);
+// const outPadding = 32.0;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,10 +36,32 @@ class MyApp extends StatelessWidget {
       }),
 
       title: 'Flutter Demo',
-      theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+      //Material 3 적용 코드!!!!!
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: lightColorScheme,
       ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: darkColorScheme,
+      ),
+      themeMode: ThemeMode.system, //시스템 설정을 따라간다!!
+
+      // //아래는 코딩파파 코드
+      // theme: ThemeData(
+      //   useMaterial3: true,
+      //   colorScheme: ColorScheme.fromSeed(seedColor: seedColor,
+      //   brightness: Brightness.light),
+      // ),
+      // darkTheme: ThemeData(
+      //   useMaterial3: true,
+      //   colorScheme: ColorScheme.fromSeed(seedColor: seedColor,
+      //       brightness: Brightness.dark),
+      // ),
+      // themeMode: ThemeMode.system, //시스템 설정을 따라간다!!
+
+
       home: Root(),
 
       getPages: [
